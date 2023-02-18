@@ -40,8 +40,6 @@ function Todos() {
   //할일ㅠㅠㅠ ㅠ
   const leftTodo = () => {
     return todos.reduce(() => {
-      // if (current.isComplete === false) return accumulator + 1;
-      // return accumulator;
       return todos.filter((todo) => !todo.done).length;
     }, [todos]);
   };
@@ -50,7 +48,9 @@ function Todos() {
     <>
       <header>
         <h1>TodoList</h1>
-        <div className="leftTodo">해야할 일 : {leftTodo()}개</div>
+        <div className="leftTodo">
+          해야할 일 :<span> {leftTodo()}</span>개
+        </div>
       </header>
       <form onSubmit={handleSubmit}>
         <input type="text" onChange={handleInput} value={input} />

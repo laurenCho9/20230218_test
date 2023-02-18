@@ -29,6 +29,9 @@ header {
   margin-top: 10px;
   margin-left: 3px;
 }
+.leftTodo > span {
+  color: red;
+}
 input[type="text"] {
   margin: 0 5px 0 23px;
   padding: 5px;
